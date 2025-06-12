@@ -39,10 +39,10 @@ def main():
                 try:
                     response = requests.post(url, json=record)
                     response.raise_for_status()
-                    print(f'Comment sent: {record['id']}')
+                    print(f'Comment ID {record['id']} sent')
 
                 except requests.exceptions.RequestException as e:
-                    print('Request error: ', e)
+                    print('Request error:', e)
                     continue
 
     except KeyboardInterrupt:
