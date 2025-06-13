@@ -16,9 +16,8 @@ def lambda_handler(event, context):
             new_message = transform_message(message, 'text') # Process and transform the message
 
             kinesis_message = (json.dumps(new_message)).encode('utf-8')
-            response = client.put_record(
+            client.put_record(
                 StreamName=os.getenv('KINESIS_NAME'),
                 Data=kinesis_message,
                 PartitionKey=str(uuid.uuid4())
             )
-            print(response)
