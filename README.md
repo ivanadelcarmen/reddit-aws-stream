@@ -6,7 +6,7 @@ The following program uses the `PRAW` (Python Reddit API Wrapper) library to col
 
 ## Architecture
 
-![AWS architecture diagram](diagram.jpg)
+![AWS architecture diagram](img/diagram.jpg)
 
 #
 
